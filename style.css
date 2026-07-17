@@ -1,0 +1,125 @@
+:root {
+  --bg: #faf9f6;
+  --text-dark: #1a1a1a;
+  --text-muted: #9a9a9a;
+  --nav-border: #e5e3dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-muted);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 32px 96px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 72px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  border: 1px solid var(--nav-border);
+  border-radius: 999px;
+  padding: 10px 22px;
+}
+
+.nav-item {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-item.active {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  color: var(--text-dark);
+}
+
+.content {
+  font-size: 34px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.content p {
+  margin: 0 0 32px;
+}
+
+.content strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.content u {
+  text-decoration-color: var(--text-muted);
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 20px 64px;
+  }
+
+  .nav {
+    margin-bottom: 40px;
+  }
+
+  .nav-left {
+    padding: 8px 16px;
+    gap: 16px;
+  }
+
+  .nav-right {
+    gap: 16px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .content {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .content p {
+    margin: 0 0 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    font-size: 19px;
+  }
+}
